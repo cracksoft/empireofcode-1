@@ -1,11 +1,9 @@
 def golf(c,t=0):
- k=[]
+ k=[]   
  for x in c:
-  y=x.split()
-  if y[0]=="PUSH":
-   k.append(int(y[1]))
-  elif y[0]=="POP":
-   t+=k.pop() if len(k)>0 else 0
+  y=len(x)
+  if y>4:
+   k.append(int(x[5:]))
   else:
-   t+=k[len(k)-1] if len(k)>0 else 0
+   t+=(k.pop() if y<4 else k[-1]) if k else 0
  return t
