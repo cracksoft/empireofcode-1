@@ -1,7 +1,4 @@
-"use strict";
-function golf(n) {
-  return parseInt((''+n).split("").reduce((x,y)=>x*=y!='0'?y:1))
-}
+function golf(n){return parseInt((''+n).split("").reduce((x,y)=>x*=y>0?y:1))}
 
 var assert = require('assert');
 //
