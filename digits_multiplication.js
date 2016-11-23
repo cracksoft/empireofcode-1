@@ -1,4 +1,4 @@
-function golf(n){return parseInt((''+n).split("").reduce((x,y)=>x*=y>0?y:1))}
+function golf(n){r=1;s=''+n;for(i in s)if(s[i]>0)r=r*s[i];return r;}
 
 var assert = require('assert');
 //
