@@ -10,10 +10,6 @@ function golf(g){
   var m = g.map((_,c)=>g.map(r=>r[c]))
   for (var i in g) if(f(g[i])) return 0
   for (var i in m) if(f(m[i])) return 0
-  for (var i in g) {
-    var x = g[i].map((_,c)=>g[i].map(r=>r[c]))
-    for (var j in x) if(f(x[j])) return 0
-  }
   for (var i in m) {
     var x = m[i].map((_,c)=>m[i].map(r=>r[c]))
     for (var j in x) if(f(x[j])) return 0
